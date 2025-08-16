@@ -1,4 +1,4 @@
-# Core ML libraries
+# Core ML libraries (CPU-only)
 torch==2.2.2
 torchvision==0.17.2
 torchaudio==2.2.2
@@ -6,10 +6,9 @@ torchaudio==2.2.2
 # Embeddings
 sentence-transformers==2.7.0
 
-# LangChain + Chroma
-langchain==0.2.5
-langchain-community==0.2.5
+# LangChain + Chroma (DuckDB backend)
 chromadb==0.5.0
+duckdb==1.9.0
 
 # PDF processing
 pypdf==4.2.0
