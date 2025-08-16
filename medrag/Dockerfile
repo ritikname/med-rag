@@ -4,7 +4,6 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
-# Install OS dependencies
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
@@ -12,6 +11,7 @@ RUN apt-get update && apt-get install -y \
     sqlite3 \
     libsqlite3-dev \
     && rm -rf /var/lib/apt/lists/*
+
 
 # Copy project files
 COPY . /app
