@@ -1,0 +1,38 @@
+# .dockerignore
+# Ignore version control
+.git/
+.gitignore
+
+# Ignore virtual environments
+.venv/
+venv/
+env/
+
+# Ignore Python cache and bytecode
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore IDE files
+.idea/
+.vscode/
+*.iml
+
+# Ignore environment secrets
+.env
+.env.*
+
+# Ignore local data storage
+storage/  # We'll use /data in HF Space instead
+prebuilt_index/  # If you have one
+
+# Ignore macOS files
+.DS_Store
+
+# Ignore large files
+*.pdf
+*.jpg
+*.png
+*.zip
+*.gz
