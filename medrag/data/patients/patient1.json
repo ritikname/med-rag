@@ -1,0 +1,19 @@
+{
+  "Name": "John Doe",
+  "DOB": "1980-05-15",
+  "MRN": "MRN12345",
+  "Address": "123 Main Street",
+  "Phone": "+1-555-123-4567",
+  "Email": "johndoe@example.com",
+  "Diagnoses": [
+    "Hypertension",
+    "Type 2 diabetes mellitus"
+  ],
+  "Medications": [
+    "ACE inhibitor",
+    "Metformin"
+  ],
+  "Conditions": [
+    "CKD stage 3"
+  ]
+}

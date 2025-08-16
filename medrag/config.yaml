@@ -1,0 +1,7 @@
+embedding_model: sentence-transformers/all-MiniLM-L6-v2
+chroma_dir: storage/chroma
+chunk_size: 1000
+chunk_overlap: 150
+top_k: 4
+anonymize: true
+use_openai: false
