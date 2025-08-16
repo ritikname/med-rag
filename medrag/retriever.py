@@ -7,18 +7,15 @@ from pathlib import Path
 from utils import load_config
 from anonymize import anonymize_text
 
+# In retriever.py, modify the PDF loading:
 def load_pdf_texts(paths: List[str]) -> List[Dict]:
     docs = []
     for p in paths:
         print(f"📖 Reading {p}")
         try:
-            reader = PdfReader(p)
-            text = "".join([page.extract_text() or "" for page in reader.pages])
-            docs.append({"path": p, "text": text})
-            print(f"✅ Loaded {len(reader.pages)} pages from {p}")
-        except Exception as e:
-            print(f"⚠️ Error reading {p}: {e}")
-    return docs
+            if not os.path.exists(p):  # ADD THIS CHECK
+                print(f"⚠️ File not found: {p}")
+                continue
 
 def chunk_text(text: str, chunk_size: int, chunk_overlap: int) -> List[str]:
     chunks = []
