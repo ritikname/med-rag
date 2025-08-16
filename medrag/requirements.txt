@@ -1,10 +1,7 @@
-# Core ML libraries (CPU-only PyTorch)
+# Core ML libraries
 torch==2.2.2
-
-torchvision==0.17.2+cpu
-torchaudio==2.2.2+cpu
-
--f https://download.pytorch.org/whl/cpu
+torchvision==0.17.2
+torchaudio==2.2.2
 
 # Embeddings
 sentence-transformers==2.7.0
