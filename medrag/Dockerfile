@@ -4,7 +4,7 @@ FROM python:3.11-slim
 # Set working directory
 WORKDIR /app
 
-# Install OS dependencies
+# Install OS dependencies (remove software-properties-common)
 RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
@@ -22,8 +22,8 @@ RUN pip install --upgrade pip
 # Install Python dependencies
 RUN pip install --no-cache-dir -r medrag/requirements.txt
 
-# Expose the port Streamlit uses
+# Expose Streamlit port
 EXPOSE 8501
 
-# Command to run the Streamlit app
-CMD ["streamlit", "run", "medrag/app.py", "--server.port=8501", "--server.address=0.0.0.0"]
+# Run Streamlit
+CMD ["streamlit", "run", "medrag/app.py", "--server.port=8501", "--server.address=0.0.0.0", "--server.headless=true"]
